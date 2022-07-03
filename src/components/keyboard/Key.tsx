@@ -22,6 +22,7 @@ interface ButtonProps {
 
 const Button = styled.div<ButtonProps>`
   font-weight: bold;
+  font-size: smaller;
   color: white;
   background-color: ${(props) => props.color};
   margin: 4px;
