@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/ollyrowe/wordle/compare/v1.1.0...v1.1.1) (2022-07-03)
+
+
+### Bug Fixes
+
+* update keyboard to show amber keys ([24def6d](https://github.com/ollyrowe/wordle/commit/24def6d6e40636237ad5ddde78ced1672c16e125))
+
 # [1.1.0](https://github.com/ollyrowe/wordle/compare/v1.0.1...v1.1.0) (2022-07-03)
 
 
