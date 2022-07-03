@@ -1,3 +1,11 @@
+## [1.1.4](https://github.com/ollyrowe/wordle/compare/v1.1.3...v1.1.4) (2022-07-03)
+
+
+### Bug Fixes
+
+* move attribute initialisations ([1149fda](https://github.com/ollyrowe/wordle/commit/1149fdad180fd25a8287aa0b6990a987e6f67cba))
+* reduce keyboard font size ([84c69a4](https://github.com/ollyrowe/wordle/commit/84c69a45a63f111f054368901007add92f501ba9))
+
 ## [1.1.3](https://github.com/ollyrowe/wordle/compare/v1.1.2...v1.1.3) (2022-07-03)
 
 
