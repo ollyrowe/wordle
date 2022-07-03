@@ -12,7 +12,7 @@
   "bugs": {
     "url": "https://github.com/ollyrowe/wordle/issues"
   },
-  "homepage": "https://github.com/ollyrowe/wordle#readme",
+  "homepage": "https://ollyrowe.github.io/wordle/",
   "release": {
     "branches": [
       "master"
