@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/ollyrowe/wordle/compare/v1.1.2...v1.1.3) (2022-07-03)
+
+
+### Bug Fixes
+
+* restrict user viewport scaling ([9d75b3f](https://github.com/ollyrowe/wordle/commit/9d75b3fc762fc762e575b16288972d16b7dcd692))
+
 ## [1.1.2](https://github.com/ollyrowe/wordle/compare/v1.1.1...v1.1.2) (2022-07-03)
 
 
