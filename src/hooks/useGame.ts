@@ -95,7 +95,25 @@ export const useGame = () => {
                 if (targetWord.letterAt(i)?.is(letter)) {
                   letter.setState(LetterState.CORRECT);
                 } else if (targetWord.contains(letter)) {
-                  letter.setState(LetterState.IN_WORD);
+                  // Get all letters which came before this letter in the current word
+                  const precedingLetters = [...letters].slice(0, i);
+
+                  // Filter these letters for occurrences of the same letter
+                  const precedingOccurrences = precedingLetters.filter(
+                    (precedingLetter) => precedingLetter.is(letter)
+                  );
+
+                  // Get all occurrences of the letter within the target word
+                  const targetOccurrences = targetWord
+                    .getLetters()
+                    .filter((targetWordLetter) => targetWordLetter.is(letter));
+
+                  // Ensure that only the correct number of letters are marked as 'In Word'
+                  if (precedingOccurrences.length < targetOccurrences.length) {
+                    letter.setState(LetterState.IN_WORD);
+                  } else {
+                    letter.setState(LetterState.INCORRECT);
+                  }
                 } else {
                   letter.setState(LetterState.INCORRECT);
                 }
