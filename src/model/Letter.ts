@@ -3,11 +3,10 @@ import { LetterState } from "./enums/LetterState";
 
 export class Letter {
   private value: Character;
-  private state: LetterState;
+  private state = LetterState.DEFAULT;
 
   constructor(value: Character) {
     this.value = value;
-    this.state = LetterState.DEFAULT;
   }
 
   public getState = () => {

@@ -4,19 +4,15 @@ import { Character } from "./enums/Character";
 import { Letter } from "./Letter";
 
 export class Word {
-  private letters: Letter[];
+  private letters: Letter[] = [];
 
   public length: number;
 
-  public shakeCount: number;
-  public waveCount: number;
+  public shakeCount = 0;
+  public waveCount = 0;
 
   constructor(...characters: Character[]) {
-    this.letters = [];
     this.length = characters.length;
-
-    this.shakeCount = 0;
-    this.waveCount = 0;
 
     for (const character of characters) {
       this.letters.push(new Letter(character));
