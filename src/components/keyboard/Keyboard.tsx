@@ -18,8 +18,18 @@ const Keyboard: React.FC<Props> = ({ onKeyPress, getAllGuessedLetters }) => {
   const letters = getAllGuessedLetters();
 
   const createKey = (keyBinding: KeyBinding, index: number) => {
-    // Find the letter associated with the key binding
-    const letter = letters.find((letter) => letter.getValue() === keyBinding);
+    // Find all occurrences of the letter associated with the key binding
+    const letterOccurrences = letters.filter(
+      (letter) => letter.getValue() === keyBinding
+    );
+
+    // If there is a letter occurrence that is correct
+    const correctLetter = letterOccurrences.find(
+      (letter) => letter.getState() === LetterState.CORRECT
+    );
+
+    // Prioritise the correct letter, to ensure that the correct colour is used
+    const letter = correctLetter || letterOccurrences[0];
 
     return (
       <Key
@@ -34,8 +44,9 @@ const Keyboard: React.FC<Props> = ({ onKeyPress, getAllGuessedLetters }) => {
   const getKeyColour = (letter?: Letter) => {
     switch (letter?.getState()) {
       case LetterState.CORRECT:
-      case LetterState.IN_WORD:
         return theme.green;
+      case LetterState.IN_WORD:
+        return theme.amber;
       case LetterState.INCORRECT:
         return theme.paper;
       default:
