@@ -68,7 +68,7 @@ const Keyboard: React.FC<Props> = ({ onKeyPress, getAllGuessedLetters }) => {
 const Container = styled.div`
   padding: 6px;
   padding-top: 0px;
-  max-width: 500px;
+  max-width: 450px;
   margin: auto;
 `;
 

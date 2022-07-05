@@ -25,7 +25,7 @@ const Button = styled.div<ButtonProps>`
   font-size: smaller;
   color: white;
   background-color: ${(props) => props.color};
-  margin: 4px;
+  margin: 2.5px;
   border-radius: 4px;
   width: 13vw;
   height: 13vw;
