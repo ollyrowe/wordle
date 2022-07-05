@@ -29,7 +29,7 @@ const Background = styled.div`
 const Container = styled.div`
   margin: auto;
   height: 100%;
-  max-height: 100vw;
+  max-height: calc(120vw - 32px);
   aspect-ratio: 5 / 6;
 `;
 
