@@ -44,7 +44,7 @@ export class Word {
   };
 
   public letterAt = (index: number) => {
-    return this.letters.at(index);
+    return this.letters[index];
   };
 
   public is = (word: Word) => {
