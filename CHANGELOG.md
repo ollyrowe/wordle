@@ -1,3 +1,15 @@
+## [1.1.5](https://github.com/ollyrowe/wordle/compare/v1.1.4...v1.1.5) (2022-07-05)
+
+
+### Bug Fixes
+
+* amend tile status logic to address bug ([1fd13f9](https://github.com/ollyrowe/wordle/commit/1fd13f9167022af5d8fe3a451968c5a549aa7921))
+* remove references to array indexing helper ([465e6a7](https://github.com/ollyrowe/wordle/commit/465e6a78256625b39b32f2e69bef9719407b6b8f))
+* revert changes to class constructors ([4b6dcc9](https://github.com/ollyrowe/wordle/commit/4b6dcc984b811c91d7c3939596f875a814847ac6))
+* update grid styles to fill smaller displays ([3864652](https://github.com/ollyrowe/wordle/commit/386465288663f0b3ead32818422d6b81fc8aa547))
+* update keyboard styles ([6ee45a6](https://github.com/ollyrowe/wordle/commit/6ee45a6de06a499eb92063b55b20be4b8dfbe982))
+* update manifest to fix image 404 ([ca90d87](https://github.com/ollyrowe/wordle/commit/ca90d8708cd24fe874fac4384dbc05a11a3c3dfe))
+
 ## [1.1.4](https://github.com/ollyrowe/wordle/compare/v1.1.3...v1.1.4) (2022-07-03)
 
 
