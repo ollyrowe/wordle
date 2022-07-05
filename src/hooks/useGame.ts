@@ -86,9 +86,10 @@ export const useGame = () => {
           if (currentWord.length === TARGET_WORD_LENGTH) {
             // Check that the word is a valid word
             if (currentWord.isValid()) {
-              // Calculate letter statuses
+              // Letters in the user's current guess
               const letters = currentWord.getLetters();
 
+              // Calculate letter statuses
               for (let i = 0; i < letters.length; i++) {
                 const letter = letters[i];
 
@@ -106,10 +107,25 @@ export const useGame = () => {
                   // Get all occurrences of the letter within the target word
                   const targetOccurrences = targetWord
                     .getLetters()
-                    .filter((targetWordLetter) => targetWordLetter.is(letter));
+                    // Store original location of letter before filtering
+                    .map((targetWordLetter, index) => ({
+                      index,
+                      targetWordLetter,
+                    }))
+                    .filter(({ targetWordLetter }) =>
+                      targetWordLetter.is(letter)
+                    );
+
+                  // Filter out letters which are correctly placed
+                  const availableOccurrences = targetOccurrences.filter(
+                    ({ targetWordLetter, index }) =>
+                      !targetWordLetter.is(letters[index])
+                  );
 
                   // Ensure that only the correct number of letters are marked as 'In Word'
-                  if (precedingOccurrences.length < targetOccurrences.length) {
+                  if (
+                    precedingOccurrences.length < availableOccurrences.length
+                  ) {
                     letter.setState(LetterState.IN_WORD);
                   } else {
                     letter.setState(LetterState.INCORRECT);
