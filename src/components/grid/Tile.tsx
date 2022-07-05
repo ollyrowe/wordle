@@ -45,7 +45,7 @@ const Box = styled.div<BoxProps>`
   margin: 2.5px;
   border: ${getBoxBorder};
   border-radius: 2px;
-  width: 16vw;
+  width: 20%;
   aspect-ratio: 1 / 1;
   max-width: 80px;
   max-height: 80px;
