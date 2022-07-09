@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { KeyBinding } from "../../model/enums/KeyBinding";
 
 interface Props {
-  binding: KeyBinding;
+  binding: string;
   onPress: () => void;
   color: string;
 }
