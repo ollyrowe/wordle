@@ -6,6 +6,7 @@ import { Action } from "../../model/enums/Action";
 import { KeyBinding } from "../../model/enums/KeyBinding";
 import { Letter } from "../../model/Letter";
 import { LetterState } from "../../model/enums/LetterState";
+import { useDocumentEventListener } from "../../hooks/useEventListener";
 
 interface Props {
   onKeyPress: (key: KeyBinding) => void;
@@ -31,10 +32,12 @@ const Keyboard: React.FC<Props> = ({ onKeyPress, getAllGuessedLetters }) => {
     // Prioritise the correct letter, to ensure that the correct colour is used
     const letter = correctLetter || letterOccurrences[0];
 
+    const binding = keyBinding === Action.BACKSPACE ? "Back" : keyBinding;
+
     return (
       <Key
         key={index}
-        binding={keyBinding}
+        binding={binding}
         onPress={() => onKeyPress(keyBinding)}
         color={getKeyColour(letter)}
       />
@@ -53,6 +56,21 @@ const Keyboard: React.FC<Props> = ({ onKeyPress, getAllGuessedLetters }) => {
         return theme.grey;
     }
   };
+
+  const handleKeyPress = (event: KeyboardEvent) => {
+    const keyPressed = String(event.key).toUpperCase();
+
+    // If a character or action key was pressed
+    if (
+      Object.keys(Character).includes(keyPressed) ||
+      Object.keys(Action).includes(keyPressed)
+    ) {
+      onKeyPress(keyPressed as KeyBinding);
+    }
+  };
+
+  // Listen to manual keyboard events
+  useDocumentEventListener("keydown", handleKeyPress);
 
   return (
     <div>
