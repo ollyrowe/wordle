@@ -25,12 +25,13 @@ const Background = styled.div`
   padding: 8px;
   flex-grow: 1;
   overflow: hidden;
+  justify-content: center;
 `;
 
 const Container = styled(AspectRatioRetainer)`
-  margin: auto;
-  height: 100%;
-  max-height: calc(120vw - 32px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export default Grid;
