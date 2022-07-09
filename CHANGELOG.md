@@ -1,3 +1,16 @@
+# [1.2.0](https://github.com/ollyrowe/wordle/compare/v1.1.5...v1.2.0) (2022-07-09)
+
+
+### Bug Fixes
+
+* add cross-platform aspect-ratio solution ([4febf4b](https://github.com/ollyrowe/wordle/commit/4febf4be371508c71a503a7a599bd9d60bb847d4))
+* add escape keybind to modal component ([edf1ed4](https://github.com/ollyrowe/wordle/commit/edf1ed4d345e172a84cde5f89f575720b458038d))
+
+
+### Features
+
+* enable manual keyboard input ([3e16f2a](https://github.com/ollyrowe/wordle/commit/3e16f2abea014a4c8a0903c34d7ead8b857ad969))
+
 ## [1.1.5](https://github.com/ollyrowe/wordle/compare/v1.1.4...v1.1.5) (2022-07-05)
 
 
