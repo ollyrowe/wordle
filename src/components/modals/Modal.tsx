@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import { useDelayUnmount } from "../../hooks/useDelayedUnmount";
+import { useDocumentEventListener } from "../../hooks/useEventListener";
 
 interface Props {
   open: boolean;
@@ -21,6 +22,12 @@ const Modal: React.FC<Props> = ({ open, title, children, onClose }) => {
 
   // Waits for the opening / closing animation to complete before unmounting
   const shouldRenderChild = useDelayUnmount(open, ANIMATION_LENGTH);
+
+  useDocumentEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      onClose();
+    }
+  });
 
   return shouldRenderChild ? (
     <ModalWrapper open={open} onClick={onClickWrapper}>
