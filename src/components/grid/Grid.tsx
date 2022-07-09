@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Word } from "../../model/Word";
 import Row from "./Row";
+import AspectRatioRetainer from "../utils/AspectRatioRetainer";
 
 interface Props {
   words: Word[];
@@ -10,7 +11,7 @@ interface Props {
 const Grid: React.FC<Props> = ({ words }) => {
   return (
     <Background>
-      <Container>
+      <Container ratio={[5, 6]}>
         {words.map((words, index) => (
           <Row key={index} word={words} />
         ))}
@@ -26,11 +27,10 @@ const Background = styled.div`
   overflow: hidden;
 `;
 
-const Container = styled.div`
+const Container = styled(AspectRatioRetainer)`
   margin: auto;
   height: 100%;
   max-height: calc(120vw - 32px);
-  aspect-ratio: 5 / 6;
 `;
 
 export default Grid;
