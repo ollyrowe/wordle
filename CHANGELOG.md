@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/ollyrowe/wordle/compare/v1.2.2...v1.2.3) (2022-07-09)
+
+
+### Bug Fixes
+
+* update tile styles to fix overflow issue ([cd45dc3](https://github.com/ollyrowe/wordle/commit/cd45dc3d7684e5caf90d3922fa7639cb84eb0cc8))
+
 ## [1.2.2](https://github.com/ollyrowe/wordle/compare/v1.2.1...v1.2.2) (2022-07-09)
 
 
