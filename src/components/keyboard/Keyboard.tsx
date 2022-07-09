@@ -32,7 +32,7 @@ const Keyboard: React.FC<Props> = ({ onKeyPress, getAllGuessedLetters }) => {
     // Prioritise the correct letter, to ensure that the correct colour is used
     const letter = correctLetter || letterOccurrences[0];
 
-    const binding = keyBinding === Action.BACKSPACE ? "Back" : keyBinding;
+    const binding = keyBinding === Action.BACKSPACE ? "BACK" : keyBinding;
 
     return (
       <Key
