@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/ollyrowe/wordle/compare/v1.2.1...v1.2.2) (2022-07-09)
+
+
+### Bug Fixes
+
+* add polyfill for tile aspect-ratio ([58034a6](https://github.com/ollyrowe/wordle/commit/58034a627985a8d1e3da7bf99dfc67e1eaecdd8d))
+
 ## [1.2.1](https://github.com/ollyrowe/wordle/compare/v1.2.0...v1.2.1) (2022-07-09)
 
 
