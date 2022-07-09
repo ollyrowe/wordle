@@ -23,7 +23,11 @@ const Tile: React.FC<Props> = ({ letter }) => {
     }
   };
 
-  return <Box color={getColour()}>{letter?.getValue()}</Box>;
+  return (
+    <Box color={getColour()}>
+      <Content>{letter?.getValue()}</Content>
+    </Box>
+  );
 };
 
 const getBoxBorder = ({ color, theme }: StyledProps<BoxProps>) => {
@@ -35,6 +39,7 @@ interface BoxProps {
 }
 
 const Box = styled.div<BoxProps>`
+  position: relative;
   display: flex;
   color: white;
   align-items: center;
@@ -50,6 +55,17 @@ const Box = styled.div<BoxProps>`
   max-width: 80px;
   max-height: 80px;
   user-select: none;
+`;
+
+const Content = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export default Tile;
