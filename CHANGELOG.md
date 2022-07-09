@@ -1,3 +1,11 @@
+## [1.2.1](https://github.com/ollyrowe/wordle/compare/v1.2.0...v1.2.1) (2022-07-09)
+
+
+### Bug Fixes
+
+* update back key text casing ([89b5f51](https://github.com/ollyrowe/wordle/commit/89b5f515af114b9c7c070d2b8b783d972d90b635))
+* update grid styles to fix display issue ([764493d](https://github.com/ollyrowe/wordle/commit/764493d20fd0cf4093dd94058cd4fa20193acefc))
+
 # [1.2.0](https://github.com/ollyrowe/wordle/compare/v1.1.5...v1.2.0) (2022-07-09)
 
 
