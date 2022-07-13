@@ -22,7 +22,7 @@ const Grid: React.FC<Props> = ({ words }) => {
 
 const Background = styled.div`
   display: flex;
-  padding: 8px;
+  padding: 8px 12px;
   flex-grow: 1;
   overflow: hidden;
   justify-content: center;
