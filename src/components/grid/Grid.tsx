@@ -32,6 +32,7 @@ const Container = styled(AspectRatioRetainer)`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 350px;
 `;
 
 export default Grid;
