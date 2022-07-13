@@ -1,3 +1,11 @@
+## [1.2.4](https://github.com/ollyrowe/wordle/compare/v1.2.3...v1.2.4) (2022-07-13)
+
+
+### Bug Fixes
+
+* add max-width to grid component ([918c08b](https://github.com/ollyrowe/wordle/commit/918c08be4262f08c11ab589d59e2febe93b9b454))
+* update grid padding ([55c0fb1](https://github.com/ollyrowe/wordle/commit/55c0fb1e030879119fc43b35df5760687bbb56fd))
+
 ## [1.2.3](https://github.com/ollyrowe/wordle/compare/v1.2.2...v1.2.3) (2022-07-09)
 
 
