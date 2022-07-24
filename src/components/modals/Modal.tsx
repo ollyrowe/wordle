@@ -85,7 +85,7 @@ const slideDownAnimation = keyframes`
 
 const ModalContents = styled.div<{ open: boolean }>`
   position: relative;
-  color: white;
+  color: ${(props) => props.theme.text};
   background-color: ${(props) => props.theme.background};
   margin: auto;
   padding: 0;

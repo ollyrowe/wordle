@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { useTheme, StyledProps } from "styled-components";
+import styled, { useTheme } from "styled-components";
 import { Letter } from "../../model/Letter";
 import { LetterState } from "../../model/enums/LetterState";
 
@@ -10,7 +10,16 @@ interface Props {
 const Tile: React.FC<Props> = ({ letter }) => {
   const theme = useTheme();
 
-  const getColour = () => {
+  const getTextColour = () => {
+    switch (letter?.getState()) {
+      case LetterState.DEFAULT:
+        return theme.text;
+      default:
+        return "white";
+    }
+  };
+
+  const getBackgroundColour = () => {
     switch (letter?.getState()) {
       case LetterState.CORRECT:
         return theme.green;
@@ -23,32 +32,47 @@ const Tile: React.FC<Props> = ({ letter }) => {
     }
   };
 
+  const getBorderColour = () => {
+    if (letter) {
+      switch (letter.getState()) {
+        case LetterState.DEFAULT:
+          return theme.active;
+        default:
+          return getBackgroundColour();
+      }
+    }
+
+    return theme.border;
+  };
+
   return (
-    <Box color={getColour()}>
+    <Box
+      textColor={getTextColour()}
+      backgroundColor={getBackgroundColour()}
+      borderColor={getBorderColour()}
+    >
       <Content>{letter?.getValue()}</Content>
     </Box>
   );
 };
 
-const getBoxBorder = ({ color, theme }: StyledProps<BoxProps>) => {
-  return `2px solid ${color === theme.background ? theme.paper : color}`;
-};
-
 interface BoxProps {
-  color: string;
+  textColor: string;
+  backgroundColor: string;
+  borderColor: string;
 }
 
 const Box = styled.div<BoxProps>`
   position: relative;
   display: flex;
-  color: white;
   align-items: center;
   justify-content: center;
   font-size: xx-large;
   font-weight: bold;
-  background-color: ${(props) => props.color};
+  color: ${(props) => props.textColor};
+  background-color: ${(props) => props.backgroundColor};
   margin: 2.5px;
-  border: ${getBoxBorder};
+  border: 2px solid ${(props) => props.borderColor};
   border-radius: 2px;
   width: 20%;
   padding-bottom: calc(20% - 9px);
