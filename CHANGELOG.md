@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/ollyrowe/wordle/compare/v1.2.4...v1.3.0) (2022-07-24)
+
+
+### Features
+
+* add automatic theme detection ([a83ab3a](https://github.com/ollyrowe/wordle/commit/a83ab3a0696d64dc8f90ac5fc29278e9a3d2609a))
+
 ## [1.2.4](https://github.com/ollyrowe/wordle/compare/v1.2.3...v1.2.4) (2022-07-13)
 
 
