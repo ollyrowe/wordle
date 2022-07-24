@@ -7,7 +7,7 @@ import { lightTheme, darkTheme, ThemeMode } from "../misc/theme";
  * @returns the currently selected theme.
  */
 export const useThemeToggle = () => {
-  const [theme, setTheme] = useState(darkTheme);
+  const [theme, setTheme] = useState(prefersDarkTheme ? darkTheme : lightTheme);
 
   const toggle = () => {
     setTheme(theme.mode === ThemeMode.Light ? darkTheme : lightTheme);
@@ -15,3 +15,7 @@ export const useThemeToggle = () => {
 
   return { ...theme, toggle };
 };
+
+const prefersDarkTheme = window.matchMedia(
+  "(prefers-color-scheme: dark)"
+).matches;

@@ -4,26 +4,37 @@ import styled from "styled-components";
 interface Props {
   binding: string;
   onPress: () => void;
-  color: string;
+  textColor: string;
+  backgroundColor: string;
 }
 
-const Key: React.FC<Props> = ({ binding, onPress, color }) => {
+const Key: React.FC<Props> = ({
+  binding,
+  onPress,
+  textColor,
+  backgroundColor,
+}) => {
   return (
-    <Button color={color} onClick={onPress}>
+    <Button
+      textColor={textColor}
+      backgroundColor={backgroundColor}
+      onClick={onPress}
+    >
       {binding}
     </Button>
   );
 };
 
 interface ButtonProps {
-  color: string;
+  textColor: string;
+  backgroundColor: string;
 }
 
 const Button = styled.div<ButtonProps>`
   font-weight: bold;
   font-size: smaller;
-  color: white;
-  background-color: ${(props) => props.color};
+  color: ${(props) => props.textColor};
+  background-color: ${(props) => props.backgroundColor};
   margin: 2.5px;
   border-radius: 4px;
   width: 13vw;

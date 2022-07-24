@@ -39,9 +39,23 @@ const Keyboard: React.FC<Props> = ({ onKeyPress, getAllGuessedLetters }) => {
         key={index}
         binding={binding}
         onPress={() => onKeyPress(keyBinding)}
-        color={getKeyColour(letter)}
+        textColor={getKeyTextColour(letter)}
+        backgroundColor={getKeyColour(letter)}
       />
     );
+  };
+
+  const getKeyTextColour = (letter?: Letter) => {
+    if (letter) {
+      switch (letter.getState()) {
+        case LetterState.DEFAULT:
+          return theme.text;
+        default:
+          return "white";
+      }
+    }
+
+    return theme.text;
   };
 
   const getKeyColour = (letter?: Letter) => {

@@ -11,10 +11,10 @@ const AppBar: React.FC = () => {
 
 const Container = styled.div`
   display: flex;
-  color: white;
+  color: ${(props) => props.theme.text};
   height: 60px;
-  border-top: 2px solid ${(props) => props.theme.paper};
-  border-bottom: 2px solid ${(props) => props.theme.paper};
+  border-top: 2px solid ${(props) => props.theme.border};
+  border-bottom: 2px solid ${(props) => props.theme.border};
 `;
 
 const Title = styled.h1`
