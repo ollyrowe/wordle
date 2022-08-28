@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://ollyrowe.github.io/algorithms/"><img src="https://raw.githubusercontent.com/ollyrowe/wordle/master/public/android-chrome-192x192.png" alt="Wordle" width="200"></a>
+  <a href="https://ollyrowe.github.io/wordle/"><img src="https://raw.githubusercontent.com/ollyrowe/wordle/master/public/android-chrome-192x192.png" alt="Wordle" width="200"></a>
   <br>
   Wordle
   <br>
@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://ollyrowe.github.io/wordle/">
     <img
-      src="https://img.shields.io/website?down_color=%23c9b458&down_message=offline&up_color=%236aaa64&up_message=online&url=https%3A%2F%2Follyrowe.github.io%2Falgorithms%2F"
+      src="https://img.shields.io/website?down_color=%23c9b458&down_message=offline&up_color=%236aaa64&up_message=online&url=https%3A%2F%2Follyrowe.github.io%2Fwordle%2F"
       alt="Website Status"
     />
   </a>
