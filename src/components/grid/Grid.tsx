@@ -12,8 +12,8 @@ const Grid: React.FC<Props> = ({ words }) => {
   return (
     <Background>
       <Container ratio={[5, 6]}>
-        {words.map((words, index) => (
-          <Row key={index} word={words} />
+        {words.map((word, index) => (
+          <Row key={index} word={word} />
         ))}
       </Container>
     </Background>
